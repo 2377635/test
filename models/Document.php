@@ -60,7 +60,8 @@ class Document extends ActiveRecord
      */
     public function getAttachments()
     {
-        return $this->hasMany(Attachment::className(), ['document_id' => 'id']);
+        return $this->hasMany(Attachment::className(), ['document_id' => 'id'])->
+                        orderBy('priority');
     }
     
     /**
