@@ -18,7 +18,6 @@ use yii\helpers\Html;
             'title',
             [
                 'class' => 'yii\grid\ActionColumn',
-                'template' => '{update} {delete}',
             ],
         ],
     ]) ?>

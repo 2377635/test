@@ -60,6 +60,16 @@ class DocumentsController extends Controller
         }
     }
     
+    public function actionView($id)
+    {
+        $document = $this->loadDocument($id);
+        
+        return $this->render('view', [
+            'document' => $document,
+            'attachments' => $document->attachments,
+        ]);
+    }
+    
     public function actionDelete($id)
     {
         $document = $this->loadDocument($id);

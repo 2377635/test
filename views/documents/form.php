@@ -51,6 +51,8 @@ JS
 $this->registerJs(
 <<<JS
 Dropzone.options.uploadForm = {
+    thumbnailWidth: 120,
+    thumbnailHeight: null,
     init: function() {
         this.on("success", function(file, obj) {
             if (obj.success === true) {
